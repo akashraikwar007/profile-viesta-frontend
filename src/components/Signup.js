@@ -39,7 +39,7 @@ const Signup = () => {
   
     try {
       const res = await fetch(
-        "http://localhost:9000/auth/signup",
+        "https://profile-viesta-backend.onrender.com/auth/signup",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -1,4 +1,4 @@
-const API_BASE = "https://profile-viesta-backend.onrender.com/auth";
+const API_BASE = "http://localhost:9000/auth";
 
 export async function login(data) {
   const res = await fetch(`${API_BASE}/login`, {

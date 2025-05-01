@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://profile-viesta-backend.onrender.com/api';
+const API_BASE_URL = 'http://localhost:9000/api';
 
 const getAuthHeader = () => {
   const token = localStorage.getItem('token');
@@ -113,4 +113,4 @@ export const api = {
       throw error;
     }
   },
-};
+};  

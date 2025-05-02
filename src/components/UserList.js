@@ -21,7 +21,7 @@ export const UserList = () => {
   const [showFilters, setShowFilters] = useState(false);
   const usersPerPage = 5;
   const [selectedImage, setSelectedImage] = useState(null);
-const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Debounce search term
   useEffect(() => {
@@ -36,10 +36,8 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     const fetchUsers = async () => {
       try {
         setLoading(true);
-        console.log(
-          "Fetching users with params:",
-        );
-        
+        console.log("Fetching users with params:");
+
         const response = await api.getUsers({
           sortBy: sortField,
           sortOrder: sortDirection,
@@ -168,9 +166,8 @@ const [isModalOpen, setIsModalOpen] = useState(false);
   };
 
   return (
-    <div className=" mx-auto px-4 py-8 " style={{backgroundColor:'#3DC1C9'}}>
-
-{isModalOpen && (
+    <div className=" mx-auto px-4 py-8 " style={{ backgroundColor: "#3DC1C9" }}>
+      {isModalOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
           onClick={() => setIsModalOpen(false)}
@@ -192,7 +189,6 @@ const [isModalOpen, setIsModalOpen] = useState(false);
         </div>
       )}
 
-
       <div
         className=" rounded-lg shadow-lg p-6 mb-8"
         style={{ backgroundColor: "#3DC1C9" }}
@@ -201,6 +197,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
           <h2 className="text-2xl font-bold text-white mb-4 md:mb-0">
             Users List
           </h2>
+
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <div className="relative flex-grow">
               <input
@@ -423,7 +420,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
               ) : (
                 users.map((user) => (
                   <tr key={user._id} className="hover:bg-gray-50">
-                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       <img
                         className="h-8 w-8 rounded-full cursor-pointer"
                         src={user.profileImage}
@@ -455,7 +452,8 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       <Link
                         to={`/users/edit/${user._id}`}
-                        className="text-blue-600 hover:text-blue-900" style={{textDecoration:'none',marginRight:'5px'}}
+                        className="text-blue-600 hover:text-blue-900"
+                        style={{ textDecoration: "none", marginRight: "5px" }}
                       >
                         Edit
                       </Link>

@@ -23,11 +23,12 @@ const Navbaar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
           <Link to="/" className="flex items-center space-x-2" style={{ textDecoration: 'none' }}>
-  <img 
+  {/* <img 
     src="https://media-hosting.imagekit.io/5fa716e3018c4f2f/logo.png?Expires=1840192924&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0tmJm3gCadSDgM2V4fqWutWmrU6NYkW0ImYx4KTFho9qHksry78khTq1m7yy7Dr-GE~Wsjuot8JC1dOStoY1rkN5d87ouIEah7~KeAAMWYpqGqdWUWrIyKgz56-wh~CVnVargTYAsqsD89WtDi3cVbbVhg-orGZWOIf91g7R--rmgL7SFvM7b15VPGLWQ32xgYT4wmWcdAzlxKjh3ATuiAtZ0M-DuMWH0GPjk8hM4Egri50VX-PVfVWCsBqsHtSSAjVK1HwYhk4h6FfXztBPtuPUgocYQwVX7QUHC~fuk7gPrdoSW3FlERQMbfc2-yAcDzXcs83cvA2TAXXhGCrdVg__" 
     alt="Profile Viesta Logo" 
     className="h-auto w-48" 
-  />
+  /> */}
+  <h1>Profile Viesta</h1>
 </Link>
 
           </div>

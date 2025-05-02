@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { Link } from "react-router-dom";
 
 const Navbaar = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Navbaar = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate('/');
   };
 
   return (
@@ -21,17 +22,14 @@ const Navbaar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <a 
-              href="/" 
-              className="flex items-center space-x-2"
-              style={{ textDecoration: 'none' }}
-            >
-              <img 
-                src="https://media-hosting.imagekit.io/5fa716e3018c4f2f/logo.png?Expires=1840192924&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0tmJm3gCadSDgM2V4fqWutWmrU6NYkW0ImYx4KTFho9qHksry78khTq1m7yy7Dr-GE~Wsjuot8JC1dOStoY1rkN5d87ouIEah7~KeAAMWYpqGqdWUWrIyKgz56-wh~CVnVargTYAsqsD89WtDi3cVbbVhg-orGZWOIf91g7R--rmgL7SFvM7b15VPGLWQ32xgYT4wmWcdAzlxKjh3ATuiAtZ0M-DuMWH0GPjk8hM4Egri50VX-PVfVWCsBqsHtSSAjVK1HwYhk4h6FfXztBPtuPUgocYQwVX7QUHC~fuk7gPrdoSW3FlERQMbfc2-yAcDzXcs83cvA2TAXXhGCrdVg__" 
-                alt="Profile Viesta Logo" 
-                className="h-auto w-48" 
-              />
-            </a>
+          <Link to="/" className="flex items-center space-x-2" style={{ textDecoration: 'none' }}>
+  <img 
+    src="https://media-hosting.imagekit.io/5fa716e3018c4f2f/logo.png?Expires=1840192924&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0tmJm3gCadSDgM2V4fqWutWmrU6NYkW0ImYx4KTFho9qHksry78khTq1m7yy7Dr-GE~Wsjuot8JC1dOStoY1rkN5d87ouIEah7~KeAAMWYpqGqdWUWrIyKgz56-wh~CVnVargTYAsqsD89WtDi3cVbbVhg-orGZWOIf91g7R--rmgL7SFvM7b15VPGLWQ32xgYT4wmWcdAzlxKjh3ATuiAtZ0M-DuMWH0GPjk8hM4Egri50VX-PVfVWCsBqsHtSSAjVK1HwYhk4h6FfXztBPtuPUgocYQwVX7QUHC~fuk7gPrdoSW3FlERQMbfc2-yAcDzXcs83cvA2TAXXhGCrdVg__" 
+    alt="Profile Viesta Logo" 
+    className="h-auto w-48" 
+  />
+</Link>
+
           </div>
 
           <div className="hidden md:flex items-center space-x-4 gap-2">

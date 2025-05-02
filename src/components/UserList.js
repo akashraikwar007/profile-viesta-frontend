@@ -20,6 +20,8 @@ export const UserList = () => {
   const [endDate, setEndDate] = useState("");
   const [showFilters, setShowFilters] = useState(false);
   const usersPerPage = 5;
+  const [selectedImage, setSelectedImage] = useState(null);
+const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Debounce search term
   useEffect(() => {
@@ -167,6 +169,30 @@ export const UserList = () => {
 
   return (
     <div className=" mx-auto px-4 py-8 " style={{backgroundColor:'#3DC1C9'}}>
+
+{isModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div className="relative">
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-0 right-0 text-white text-xl font-bold p-2"
+            >
+              ✖
+            </button>
+            <img
+              src={selectedImage}
+              alt="Full View"
+              className="max-w-[90vw] max-h-[90vh] rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
+
+
       <div
         className=" rounded-lg shadow-lg p-6 mb-8"
         style={{ backgroundColor: "#3DC1C9" }}
@@ -397,11 +423,15 @@ export const UserList = () => {
               ) : (
                 users.map((user) => (
                   <tr key={user._id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       <img
-                        className="h-8 w-8 rounded-full"
+                        className="h-8 w-8 rounded-full cursor-pointer"
                         src={user.profileImage}
                         alt={`${user.firstName} ${user.lastName}`}
+                        onClick={() => {
+                          setSelectedImage(user.profileImage);
+                          setIsModalOpen(true);
+                        }}
                       />
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">

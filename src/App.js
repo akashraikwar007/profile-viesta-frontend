@@ -11,6 +11,7 @@ import { UserList } from "./components/UserList";
 import UserForm from "./components/UserForm";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Second from "./components/Second";
 import "./App.css";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
@@ -27,13 +28,13 @@ const AppContent = () => {
           {/* Public routes */}
           <Route element={<PublicRoute isAuthenticated={isAuthenticated} />}>
             <Route path="/" element={<Home />} />
+            <Route path="/second" element={<Second />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Route>
           
           {/* Protected routes */}
           <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
-            {/* <Route path="/" element={<Home />} /> */}
             <Route path="/userlist" element={<UserList />} />
             <Route path="/users/new" element={<UserForm />} />
             <Route path="/users/edit/:id" element={<UserForm />} />

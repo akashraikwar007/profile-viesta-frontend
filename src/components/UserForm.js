@@ -37,6 +37,10 @@ const UserForm = () => {
         setPreviewImage(user.profileImage);
       }
     } catch (err) {
+      console.log(
+        error
+      );
+      
       setError(err instanceof Error ? err.message : 'Failed to load user');
     }
   };

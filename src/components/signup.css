@@ -1,100 +1,63 @@
-.akak {
-    background: #44C2C9 !important;
-    border-radius: 5px;
-    color: white !important;
+.main-bg {
+    background: linear-gradient(135deg, #44C2C9 0%, #92fe9d 100%);
   }
   
-  .sinup {
-    color: #44C2C9 !important;
-    margin-top: 50px;
-    font-weight: 600;
+  .login-wrapper {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+  }
+  
+  .login-card {
+    background-color: white;
+    width: 900px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .login-left {
+    background: linear-gradient(135deg, #44C2C9 0%, #92fe9d 100%);
+    flex: 1;
+    padding: 40px;
+    color: white;
+    min-width: 300px;
+  }
+  
+  .login-right {
+    flex: 1;
+    background-color: #ffffff;
   }
   
   .input-group-text {
-    color: white;
-    background-color: #44C2C9 !important;
+    background-color: #f0f0f0;
+    border-right: 0;
   }
   
-  .border-all {
-    border-radius: 30px;
-    box-shadow: 0 0 40px rgba(0, 123, 255, 0.6),
-                0 0 60px rgba(0, 123, 255, 0.4),
-                0 0 80px rgba(0, 123, 255, 0.2);
-    transition: transform 0.3s ease;
-    padding: 20px;
-    background-color: #fff;
-  }
-
-  .login-container{
-    border-radius: 30px;
-    box-shadow: 0 0 40px rgba(0, 123, 255, 0.6),
-                0 0 60px rgba(0, 123, 255, 0.4),
-                0 0 80px rgba(0, 123, 255, 0.2);
-    transition: transform 0.3s ease;
-    padding: 20px;
-    background-color: #fff;
+  .form-control {
+    border-left: 0;
   }
   
-  .border-all:hover {
-    transform: scale(1.02);
+  .btn-login {
+    background-color: #003cff;
+    border: none;
+  }
+  
+  .btn-login:hover {
+    background-color: #0022cc;
   }
 
-  .glow-bg img{
-    border-radius: 500px !important;
-    padding: 10px !important;
-  }
-
-  .btn-login{
+  .btn-primary-login{
     background-color: #44C2C9;
-    color: white !important;
-  }
-
-  .login-container{
-    margin-top: 100px !important;
+    color: white;
   }
   
-  .signup-link{
-    color: #44C2C9 !important;
-    text-decoration: none; margin-left: 5px;
-  }
-
-    @media (max-width: 768px) {
-    .sinup {
-      font-size: 1.5rem;
-      margin-top: 20px;
-    }
-  
-    .glow-bg {
-      margin-bottom: 20px;
-    }
-  
-    .border-all {
-      box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
-      padding: 15px;
-    }
-  
-    .akak button {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .input-group {
-      flex-direction: column;
-    }
-  
-    .input-group .form-control,
-    .input-group .input-group-text {
-      width: 100%;
+  @media (max-width: 768px) {
+    .login-left {
       text-align: center;
+      align-items: center !important;
     }
-  
-    .input-group-text {
-      border-radius: 5px 5px 0 0;
-    }
-  
-    .form-control {
-      border-radius: 0 0 5px 5px;
+    .login-left h2, .login-left h5, .login-left p {
+      text-align: center;
     }
   }
   

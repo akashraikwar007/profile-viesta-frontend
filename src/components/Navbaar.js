@@ -78,7 +78,7 @@ const Navbaar = () => {
                   className="text-white hover:bg-blue-700 px-4 button-style py-2 rounded-md text-sm font-medium transition duration-200"
                   style={{ backgroundColor: "#3DC1C9" }}
                 >
-                  Login
+                  Sign In
                 </button>
                 <button
                   onClick={() => navigate("/signup")}

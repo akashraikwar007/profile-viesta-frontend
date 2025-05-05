@@ -23,7 +23,7 @@ const AppContent = () => {
   return (
     <>  
       <Navbaar />
-      <div className="container mt-4">
+      <div className="">
         <Routes>
           {/* Public routes */}
           <Route element={<PublicRoute isAuthenticated={isAuthenticated} />}>

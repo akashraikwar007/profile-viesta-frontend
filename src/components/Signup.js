@@ -65,129 +65,135 @@ const Signup = () => {
   };
 
   return (
-    <div className="container mt-4 border-all"> 
-      <h2 className="text-center mb-4 sinup">Registration</h2>
-      <div className="row justify-content-center">
-        <div className="col-md-4 mb-3 text-center glow-bg">
-          <img
-            src="https://img.freepik.com/premium-vector/vector-about-file-sharing-data-transfer-concept-with-people-sending-files-business_675567-3053.jpg"
-            alt="Signup"
-            className="img-fluid rounded"
-          />
+    <div className="container-fluid main-bg py-5 d-flex justify-content-center align-items-center min-vh-100 bg-gradient-to-r from-cyan-500 to-blue-500">
+      <div className="row w-75 shadow-lg rounded-4 overflow-hidden">
+        <div className="col-md-6 bg-white p-5">
+          <div className="text-center mb-4">
+            <h3 className="fw-bold">Profile Viesta</h3>
+            <p className="text-muted">Create an account</p>
+          </div>
+
+          <button className="btn btn-primary w-100 mb-3">
+            <i className="fab fa-facebook me-2"></i> Sign up with Facebook
+          </button>
+
+          <div className="text-center mb-3 text-muted">— or —</div>
+
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                name="username"
+                placeholder="Username"
+                value={form.username}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="mb-3">
+              <input
+                className="form-control"
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={form.password}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="row">
+              <div className="col-md-6 mb-3">
+                <input
+                  className="form-control"
+                  name="firstName"
+                  placeholder="First Name"
+                  value={form.firstName}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="col-md-6 mb-3">
+                <input
+                  className="form-control"
+                  name="lastName"
+                  placeholder="Last Name"
+                  value={form.lastName}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div className="mb-3">
+              <input
+                className="form-control"
+                name="email"
+                type="email"
+                placeholder="Email"
+                value={form.email}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="mb-4">
+              <select
+                className="form-control"
+                name="gender"
+                value={form.gender}
+                onChange={handleChange}
+              >
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <button className="btn btn-info w-100 text-white" type="submit">
+              Get Started
+            </button>
+
+            {error && <div className="text-danger mt-2">{error}</div>}
+            {success && <div className="text-success mt-2">{success}</div>}
+          </form>
+
+          <div className="text-center mt-3">
+            Already have an account?{" "}
+            <a
+              href="/login"
+              className=" text-decoration-none"
+              style={{ color: "#44C2C9" }}
+            >
+              Log in
+            </a>
+          </div>
         </div>
 
-        <div className="col-md-8">
-          <div className="mt-5 border">
-            <form onSubmit={handleSubmit}>
-              <div className="row">
-                <div className="col-md-6 mb-3">
-                  <div className="input-group">
-                    <span className="input-group-text">
-                      <i className="fas fa-user"></i>
-                    </span>
-                    <input
-                      className="form-control"
-                      name="username"
-                      placeholder="Username"
-                      value={form.username}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-                <div className="col-md-6 mb-3">
-                  <div className="input-group">
-                    <span className="input-group-text">
-                      <i className="fas fa-lock"></i>
-                    </span>
-                    <input
-                      className="form-control"
-                      name="password"
-                      type="password"
-                      placeholder="Password"
-                      value={form.password}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-              </div>
+        <div className="col-md-6 position-relative p-0">
+          <div
+            className="h-100 w-100 d-flex flex-column justify-content-center align-items-center text-white text-center p-5 bg-cover bg-center position-relative"
+            style={{
+              backgroundImage:
+                "url('https://www.careerguide.com/career/wp-content/uploads/2023/01/working-professionals-1.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              minHeight: "300px",
+            }}
+          >
+            <div
+              className="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"
+              style={{ zIndex: 1 }}
+            ></div>
 
-              <div className="row">
-                <div className="col-md-6 mb-3">
-                  <div className="input-group">
-                    <span className="input-group-text">
-                      <i className="fas fa-user-tag"></i>
-                    </span>
-                    <input
-                      className="form-control"
-                      name="firstName"
-                      placeholder="First Name"
-                      value={form.firstName}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-                <div className="col-md-6 mb-3">
-                  <div className="input-group">
-                    <span className="input-group-text">
-                      <i className="fas fa-user-tag"></i>
-                    </span>
-                    <input
-                      className="form-control"
-                      name="lastName"
-                      placeholder="Last Name"
-                      value={form.lastName}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-md-6 mb-3">
-                  <div className="input-group">
-                    <span className="input-group-text">
-                      <i className="fas fa-envelope"></i>
-                    </span>
-                    <input
-                      className="form-control"
-                      name="email"
-                      type="email"
-                      placeholder="Email"
-                      value={form.email}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-
-                <div className="col-md-6 mb-3">
-                  <div className="input-group">
-                    <span className="input-group-text">
-                      <i className="fas fa-venus-mars"></i>
-                    </span>
-                    <select
-                      className="form-control"
-                      name="gender"
-                      value={form.gender}
-                      onChange={handleChange}
-                    >
-                      <option value="">Select Gender</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div className="d-grid akak">
-                <button className="btn btn-signup text-white" type="submit">
-                  Signup
-                </button>
-              </div>
-
-              {error && <div className="text-danger mt-2">{error}</div>}
-              {success && <div className="text-success mt-2">{success}</div>}
-            </form>
+            <div style={{ zIndex: 2 }}>
+              <h2 className="fw-bold mb-3">
+                Mastermind Better.
+                <br />
+                Succeed Together.
+              </h2>
+              <p className="lead">
+                Get meaningful results with essential tools for brainstorming,
+                goal setting, and accountability.
+              </p>
+            </div>
           </div>
         </div>
       </div>

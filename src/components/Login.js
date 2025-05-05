@@ -57,8 +57,18 @@ const Login = () => {
   };
 
   return (
-    <div className="row justify-content-center">
-      <div className="col-md-6">
+    <div className="container login-container  ">
+      <div className="row ">
+      <div className="col-md-4 mb-3 text-center ">
+      <img
+            src="https://www.freevector.com/uploads/vector/preview/59379/vecteezyCharacter_Focused_Illustration_-_librarianAS1021_generated.jpg"
+            alt="Signup"
+            className="img-fluid rounded"
+          />
+      </div>
+
+      
+      <div className="col-md-8">
         <div className="card shadow-sm">
           <div className="card-body p-4">
             <h2 className="card-title text-center mb-4">Login</h2>
@@ -68,7 +78,10 @@ const Login = () => {
               </div>
             )}
             <form onSubmit={handleSubmit}>
-              <div className="mb-3">
+              <div className="mb-3 input-group">
+              <span className="input-group-text">
+                      <i className="fas fa-user"></i>
+                    </span>
                 <input 
                   className={`form-control ${formErrors.username ? 'is-invalid' : ''}`}
                   name="username" 
@@ -81,7 +94,11 @@ const Login = () => {
                   <div className="invalid-feedback">{formErrors.username}</div>
                 )}
               </div>
-              <div className="mb-3">
+
+              <div className="mb-3 input-group">
+              <span className="input-group-text">
+                      <i className="fas fa-user"></i>
+                    </span>
                 <input 
                   className={`form-control ${formErrors.password ? 'is-invalid' : ''}`}
                   name="password" 
@@ -97,7 +114,7 @@ const Login = () => {
               </div>
               <div className="d-grid gap-2">
                 <button 
-                  className="btn btn-primary" 
+                  className="btn btn-login" 
                   type="submit"
                   disabled={isLoading}
                 >
@@ -114,12 +131,13 @@ const Login = () => {
             </form>
             <div className="text-center mt-3">
               <p className="mb-0">
-                Don't have an account? <Link to="/signup">Sign up</Link>
+                Don't have an account? <Link to="/signup" className="signup-link">Sign up</Link>
               </p>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

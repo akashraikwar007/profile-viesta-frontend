@@ -1,0 +1,100 @@
+.akak {
+    background: #44C2C9 !important;
+    border-radius: 5px;
+    color: white !important;
+  }
+  
+  .sinup {
+    color: #44C2C9 !important;
+    margin-top: 50px;
+    font-weight: 600;
+  }
+  
+  .input-group-text {
+    color: white;
+    background-color: #44C2C9 !important;
+  }
+  
+  .border-all {
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(0, 123, 255, 0.6),
+                0 0 60px rgba(0, 123, 255, 0.4),
+                0 0 80px rgba(0, 123, 255, 0.2);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .login-container{
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(0, 123, 255, 0.6),
+                0 0 60px rgba(0, 123, 255, 0.4),
+                0 0 80px rgba(0, 123, 255, 0.2);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .border-all:hover {
+    transform: scale(1.02);
+  }
+
+  .glow-bg img{
+    border-radius: 500px !important;
+    padding: 10px !important;
+  }
+
+  .btn-login{
+    background-color: #44C2C9;
+    color: white !important;
+  }
+
+  .login-container{
+    margin-top: 100px !important;
+  }
+  
+  .signup-link{
+    color: #44C2C9 !important;
+    text-decoration: none; margin-left: 5px;
+  }
+
+    @media (max-width: 768px) {
+    .sinup {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+  
+    .glow-bg {
+      margin-bottom: 20px;
+    }
+  
+    .border-all {
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+      padding: 15px;
+    }
+  
+    .akak button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .input-group {
+      flex-direction: column;
+    }
+  
+    .input-group .form-control,
+    .input-group .input-group-text {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .input-group-text {
+      border-radius: 5px 5px 0 0;
+    }
+  
+    .form-control {
+      border-radius: 0 0 5px 5px;
+    }
+  }
+  
